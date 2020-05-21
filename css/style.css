@@ -1,0 +1,576 @@
+/*google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed:wght@700&family=Roboto+Slab:wght@300;700&display=swap');
+
+
+/*common css*/
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+ul,
+ol {
+    list-style: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/*preloader*/
+
+.preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100% !important;
+    height: 100% !important;
+    text-align: center;
+    background: #ffff;
+    z-index: 9999999999999;
+}
+
+.preloader img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*navbar part css*/
+#nav_part {
+    background-color: rgba(0, 0, 0, .44) !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: all .3s linear;
+}
+
+.icon_bar {
+    width: 30px;
+    height: 3px;
+    background-color: #28B8D8;
+    position: relative;
+    display: block;
+    margin: 6px 0;
+    transition: all .3s linear;
+}
+
+.navbar-toggler.active .icon_bar:nth-child(1) {
+    transform: rotate(45deg);
+    top: 9px;
+}
+
+.navbar-toggler.active .icon_bar:nth-child(2) {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.navbar-toggler.active .icon_bar:nth-child(3) {
+    transform: rotate(135deg);
+    bottom: 9px;
+}
+
+.nav-link {
+    color: #ffff !important;
+    padding-left: 23px !important;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 20px 0;
+}
+
+.nav-link:hover {
+    color: #adadb0 !important;
+}
+
+nav#nav_part.sticky {
+    background-color: rgba(0, 0, 0, .90) !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+
+.navbar-collapse {}
+
+.navbar-collapse.nav_active {
+    position: absolute;
+    right: 0%;
+    top: 108%;
+    background-color: rgba(0, 0, 0, .95) !important;
+    transition: all .3s linear;
+}
+
+.navbar-collapse.nav_active .nav-link {
+    padding: 15px 125px;
+    padding-left: 130px !important;
+}
+
+/*banner part start*/
+.banner {
+    background: url(../images/banner.png);
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+    height: 100vh;
+}
+
+.banner h2 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    color: #ffff;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+.banner h3 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 40px;
+    font-weight: 300;
+    color: #ffff;
+    text-transform: uppercase;
+}
+
+.banner p {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: #ffff;
+}
+
+/*about part css*/
+
+#about {
+    padding-top: 80px;
+}
+
+.about_header h2 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+    font-size: 30px;
+    color: #444444;
+    padding-bottom: 15px;
+}
+
+.about_header p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #444444;
+    font-size: 14px;
+    padding-bottom: 55px;
+}
+
+.about_text h2 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    color: #444444;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+}
+
+.about_widgets {
+    border: 1px dashed #e3e3e3;
+    transition: all .3s linear;
+}
+
+.about_widgets:hover {
+    border: 1px solid #e3e3e3;
+}
+
+.about_img img {
+    width: 99%;
+    margin-top: 6px;
+}
+
+.about_widgs_text h2 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    color: #444444;
+    font-size: 17px;
+    text-transform: capitalize;
+    padding-top: 25px;
+}
+
+.about_widgs_text p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #666666;
+    line-height: 25px;
+    padding: 0 10px 5px 10px;
+}
+
+/*instagram part css*/
+
+
+#instagram {
+    padding-top: 80px;
+}
+
+.instagram {
+    background-color: #2c2c2c;
+}
+
+.insta_header h2 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    color: #d5d5d5;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    display: inline-block;
+    position: relative;
+}
+
+.insta_header h2::before {
+    position: absolute;
+    top: 55%;
+    left: 108%;
+    transform: translateY(-55%);
+    content: '';
+    background-color: #e3e3e3;
+    height: 1px;
+    width: 100px;
+}
+
+.insta_header h2::after {
+    position: absolute;
+    top: 55%;
+    right: 108%;
+    transform: translateY(-55%);
+    content: '';
+    background-color: #e3e3e3;
+    height: 1px;
+    width: 100px;
+}
+
+.insta_img img {
+    width: 100%;
+}
+
+.insta_icon {
+    border: 1px solid #a6a6a6;
+    display: inline-block;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.insta_icon i {
+    font-size: 15px;
+    color: #a6a6a6;
+    display: inline-block;
+    padding-left: 16px;
+    padding-top: 9px;
+}
+
+.insta_icon h2 {
+    font-family: 'Roboto', sans-serif;
+    color: #a6a6a6;
+    text-transform: uppercase;
+    font-size: 14px;
+    display: inline-block;
+    padding-right: 16px;
+}
+
+
+/*journal part css*/
+
+#journal {
+    padding-top: 80px;
+}
+
+.journal_header h2 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    color: #444444;
+    font-size: 18px;
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.journal_header h2::before {
+    position: absolute;
+    top: 55%;
+    left: 108%;
+    transform: translateY(-55%);
+    content: '';
+    background-color: #d9d9d9;
+    height: 1px;
+    width: 100px;
+}
+
+.journal_header h2::after {
+    position: absolute;
+    top: 55%;
+    right: 108%;
+    transform: translateY(-55%);
+    content: '';
+    background-color: #d9d9d9;
+    height: 1px;
+    width: 100px;
+}
+
+.journal_wids {
+    border: 1px solid #e3e3e3;
+}
+
+.jour_wids_text h2 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    color: #444444;
+    font-size: 17px;
+    padding-top: 25px;
+}
+
+.jour_wids_text h3 {
+    font-family: 'Roboto', sans-serif;
+    color: #999999;
+    font-size: 12px;
+    padding-bottom: 20px;
+}
+
+.jour_img img {
+    width: 100%
+}
+
+.jour_pera p {
+    font-family: 'Roboto', sans-serif;
+    color: #666666;
+    font-size: 14px;
+    padding: 0 20px 0 20px;
+    padding-top: 25px;
+}
+
+.jour_down {
+    display: inline-block;
+}
+
+.jour_down h2 {
+    font-family: 'Roboto', sans-serif;
+    color: #999999;
+    font-size: 11px;
+    display: inline-block;
+    padding-bottom: 5px;
+    position: relative;
+    margin-bottom: 25px;
+    margin-left: 25px;
+}
+
+.jour_down h2::after {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    content: '';
+    height: 2px;
+    width: 0%;
+    background-color: #28b8d8;
+    transition: all .3s linear;
+
+}
+
+.jour_down h2:hover::after {
+    width: 100%;
+
+}
+
+.jour_icon {
+    margin-top: -51px;
+    margin-bottom: 12px;
+}
+
+.jour_icon i {
+    font-size: 11px;
+    color: #999999;
+    display: inline-block;
+
+}
+
+.jour_icon h2 {
+    font-family: 'Roboto', sans-serif;
+    color: #999999;
+    font-size: 11px;
+    display: inline-block;
+    margin-right: 25px;
+    width: 20px;
+}
+
+
+/*services part css*/
+
+#services {
+    padding-top: 80px;
+}
+
+.ser_header h2 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    color: #444444;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding-bottom: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+.ser_header h2::after {
+    position: absolute;
+    top: 20%;
+    left: 110%;
+    transform: translateY(-24%);
+    content: '';
+    background-color: #d9d9d9;
+    height: 2px;
+    width: 100px;
+}
+
+.little_img img {
+    width: 100%;
+}
+
+.little_text {
+    margin-left: -15px;
+}
+
+.little_text h2 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+    color: #666666;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.little_text p {
+    font-family: 'Roboto', sans-serif;
+    color: #666666;
+    font-size: 14px;
+}
+
+.ser_text {
+    margin-left: 10px;
+}
+
+.ser_text h2 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    color: #444444;
+    font-size: 17px;
+}
+
+.ser_text p {
+    font-family: 'Roboto', sans-serif;
+    color: #666666;
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+
+/*footer part css*/
+#contact {
+    padding-top: 80px;
+}
+
+.footer_top {
+    background-color: #373737;
+}
+
+.footer_header h2 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #f0f0f0;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+    padding-top: 70px;
+}
+
+.get_pera h2 {
+    font-family: 'Roboto', sans-serif;
+    color: #cacaca;
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.footer_icon i {
+    color: #cacaca;
+    font-size: 14px;
+}
+
+.location {
+    font-family: 'Roboto', sans-serif;
+    color: #cacaca;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.twitter_part h2 {
+    font-family: 'Roboto', sans-serif;
+    color: #cacaca;
+    font-size: 14px;
+    line-height: 25px;
+    padding-bottom: 13px;
+}
+
+.popular_part h2 {
+    font-family: 'Roboto', sans-serif;
+    color: #cacaca;
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.popular_part p {
+    font-family: 'Roboto', sans-serif;
+    color: #929292;
+    font-size: 12px;
+    padding-bottom: 10px;
+}
+
+.about_us h2 {
+    font-family: 'Roboto', sans-serif;
+    color: #cacaca;
+    font-size: 14px;
+    line-height: 25px;
+    padding-bottom: 20px;
+}
+
+.footer_bottom {
+    background-color: #333333;
+}
+
+.footer_bottom p {
+    font-family: 'Roboto', sans-serif;
+    color: #cacaca;
+    font-size: 14px;
+    padding: 20px 0;
+}
+
+
+/*back to top*/
+.back_to_top {
+    position: fixed;
+    bottom: 3%;
+    right: 3%;
+    width: 40px;
+    height: 37px;
+    display: none;
+    background-color: #28B8D8;
+    text-align: center;
+    clip-path: polygon(100% 40%, 76% 40%, 76% 100%, 24% 100%, 24% 40%, 0 40%, 50% 0);
+    cursor: pointer;
+}
